@@ -1,6 +1,6 @@
 {% set name = "importscan" %}
-{% set version = "0.1" %}
-{% set sha256 = "5c003afe8d7f48d684bc9f66e8109952234812b225be324ce572ce4278b18f10" %}
+{% set version = "0.2" %}
+{% set sha256 = "4fb19627e1349dfd7d49d9bbd1b1bfff0f0a13e884d6cf9dcaf16f865375c9b2" %}
 
 package:
   name: {{ name|lower }}
@@ -13,8 +13,8 @@ source:
 
 build:
   noarch: python
-  number: 1
-  script: python -m pip install --no-deps --ignore-installed .
+  number: 0
+  script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
   host:
