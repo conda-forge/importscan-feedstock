@@ -1,6 +1,6 @@
 {% set name = "importscan" %}
-{% set version = "0.2" %}
-{% set sha256 = "4fb19627e1349dfd7d49d9bbd1b1bfff0f0a13e884d6cf9dcaf16f865375c9b2" %}
+{% set version = "1.0.0" %}
+{% set sha256 = "eb346742fd225bce326f2d1c0dc97d7ed0a9904175c8958b32f7ef48dd774252" %}
 
 package:
   name: {{ name|lower }}
@@ -8,12 +8,12 @@ package:
 
 source:
   fn: {{ name }}-{{ version }}.tar.gz
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: {{ sha256 }}
 
 build:
   noarch: python
-  number: 1
+  number: 0
   script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
